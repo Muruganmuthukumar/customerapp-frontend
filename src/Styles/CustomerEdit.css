@@ -1,0 +1,211 @@
+.edit-container {
+    height: auto;
+    background-color: #fff;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: width .3s ease-in;
+    position: relative;
+}
+
+.form-container h3 {
+    font-size: 28px;
+    align-self: flex-start;
+}
+
+.form-container h3:after {
+    content: '';
+    position: absolute;
+    margin-bottom: -10px;
+    top: 83px;
+    left: 10px;
+    right: 10px;
+    width: 97%;
+    height: 2px;
+    background-color: rgb(204, 204, 204);
+    opacity: 90%;
+}
+
+.form-container {
+    height: auto;
+    width: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: ; */
+    margin: 50px 0px;
+    /* background-color: burlywood; */
+}
+
+.form-container form .input-box {
+    width: 255px;
+    height: 60px;
+    margin: 20px 20px 30px 0px;
+    font-size: 16px;
+    border: 1px solid rgb(204, 204, 204);
+    outline: none;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    position: relative;
+}
+
+.form-container form .input-box:last-child {
+    align-self: flex-start;
+}
+
+.form-container form input {
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.form-container form .input-box input:focus+label {
+    top: -11px;
+    color: blue;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.form-container form .input-box input:not(:placeholder-shown)+label {
+    top: -11px;
+    /* color: blue; */
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.form-container form .input-box:focus-within {
+    border: 1px solid blue;
+}
+
+.form-container form .input-box:not(:focus-within):hover {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.form-container form .input-box label {
+    top: 15px;
+    left: 8px;
+    width: fit-content;
+    position: absolute;
+    text-transform: capitalize;
+    font-size: 17px;
+    pointer-events: none;
+    transition: 0.3s;
+    padding: 0px 5px;
+}
+
+.form-container .btn-container {
+    /* background-color: aqua; */
+    align-self: flex-end;
+    margin-right: 14px;
+    display: flex;
+}
+
+.form-container .btn-container button .icon {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.form-container button {
+    width: 110px;
+    height: 50px;
+    margin: 8px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.767) -3px 5px 6px -3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all .2s ease-in;
+}
+
+.form-container button:first-child:active {
+    opacity: 95%;
+}
+
+.form-container button:first-child {
+    margin-right: 20px;
+    background-color: rgba(128, 128, 128, 0.733);
+    opacity: 95%;
+    color: rgba(0, 0, 0, 0.836);
+}
+
+.form-container button:hover {
+    opacity: 85%;
+}
+
+.form-container button:last-child {
+    background-color: rgba(0, 0, 255, 0.801);
+    color: #fcfcfc;
+}
+
+.form-container button:last-child:disabled{
+    opacity: 75%;
+    cursor: default;
+}
+.form-container button:last-child:hover {
+    opacity: 75%;
+}
+
+.form-container button:last-child:active {
+    opacity: 95%;
+}
+
+.form-container img {
+    height: 130px;
+    width: 130px;
+    margin-left: 30px;
+    margin-top: 45px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 12px rgba(182, 182, 182, 0.384);
+}
+
+.form-container .img-container {
+    align-self: flex-start;
+}
+
+.form-container select{
+    padding: 8px;
+    height: 60px;
+    width: 255px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.form-container select:hover{
+    border-color: #000;
+}
+.form-container select:focus{
+    border-color: blue;
+}

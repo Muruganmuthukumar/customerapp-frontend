@@ -1,0 +1,113 @@
+.signin-container {
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("../../public/images/signin-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+.signin-container h1{
+    font-size: 27px;
+    text-transform: capitalize;
+    color: rgb(36, 36, 36);
+}
+
+.signin-container form {
+    height: 450px;
+    width: 350px;
+    padding: 25px;
+    margin-top: 30px;
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.418);
+}
+.signin-container form h2{
+    margin-bottom: 35px;
+    margin-top: -25px;
+    font-size: 30px;
+    color: rgb(36, 36, 36);
+}
+
+.signin-container form input {
+    width: 100%;
+    height: 55px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #fcfcfc;
+}
+
+.signin-container form input:focus {
+    border: 1px solid blueviolet;
+}
+
+.signin-container form input:focus+label {
+    top: -10px;
+    color: blueviolet;
+    background-color: #fcfcfc;
+    font-size: 14px;
+}
+.signin-container form input:not(:placeholder-shown)+label {
+    top: -10px;
+    background-color: #fcfcfc;
+    font-size: 14px;
+}
+
+.signin-container form .input-container {
+    /* background-color: aqua; */
+    width: 100%;
+    position: relative;
+}
+
+.signin-container form .input-container label {
+    top: 13px;
+    left: 8px;
+    width: fit-content;
+    position: absolute;
+    text-transform: capitalize;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.3s;
+    padding: 0px 5px;
+}
+
+.signin-container form button{
+    width: 100%;
+    height: 45px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    margin-top: 15px;
+    background-color: blueviolet;
+    color: #fcfcfc;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.signin-container form p{
+    color: rgb(245, 46, 46);
+    font-size: 13px;
+    margin-bottom: -20px;
+    text-transform: capitalize;
+    align-self: flex-start;
+    font-weight: 600;
+}
+.signin-container form button:hover{
+    opacity: 90%;
+}
+.signin-container form button:active{
+    opacity: 98%;
+}

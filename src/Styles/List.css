@@ -1,0 +1,411 @@
+.pages-container {
+    height: auto;
+    background-color: #fff;
+    padding: 15px 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+    overflow-x: scroll;
+}
+
+@media (max-width: 768px) {
+    .pages-container {
+        padding: 10px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+}
+
+.pages-container::-webkit-scrollbar {
+    display: none;
+}
+
+.pages-container h3 {
+    font-size: 14pt;
+    margin: 0px 10px 15px 10px;
+    text-transform: capitalize;
+}
+
+.pages-container h4 {
+    color: #333;
+    text-align: center;
+    width: 100%;
+    margin: 150px 0px;
+    /* height: 50vh; */
+    text-transform: capitalize;
+}
+
+.pages-container table img {
+    height: 45px;
+    width: 45px;
+    margin: 7px 0px 3px 0px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 12px rgba(182, 182, 182, 0.589);
+}
+
+.pages-container table {
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.pages-container table thead {
+    border-bottom: 2px solid rgb(207, 207, 207);
+    border-top: 2px solid rgb(207, 207, 207);
+}
+
+.pages-container table thead tr {
+    height: 45px;
+}
+
+.pages-container table thead tr th {
+    text-align: left;
+    font-size: 15px;
+}
+
+.pages-container table thead tr th:last-child {
+    text-align: center;
+}
+
+.pages-container table tbody tr {
+    border-bottom: 2px solid rgb(207, 207, 207);
+    height: 10px;
+}
+
+.pages-container table tbody tr td {
+    position: relative;
+}
+
+.pages-container table tbody tr .success {
+    text-shadow: 0px 0px 2px rgb(27, 255, 27);
+    color: rgba(0, 214, 0, 0.671);
+    border-radius: 50%;
+    animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 85%;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.pages-container table tbody td {
+    text-align: left;
+    font-size: 14px;
+}
+
+.pages-container table tbody td:nth-child(2) {
+    text-transform: capitalize;
+}
+
+.pages-container table tbody td:nth-child(3) {
+    text-transform: capitalize;
+}
+
+.pages-container tbody tr td:last-child {
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-right: -20px;
+}
+
+.member-icon {
+    font-size: 22px;
+}
+
+.pages-container tbody button {
+    height: 38px;
+    width: 70px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all .2s ease-in;
+}
+
+.pages-container tbody button .icon {
+    font-size: 18px;
+}
+
+.pages-container tbody button:first-child {
+    background-color: rgba(0, 10, 156, 0.815);
+}
+
+.pages-container tbody button:first-child:hover {
+    background-color: rgba(59, 50, 184, 0.815);
+}
+
+.pages-container tbody button:first-child:active {
+    background-color: rgba(10, 0, 156, 0.815);
+}
+
+.pages-container tbody button:last-child {
+    background-color: rgb(207, 207, 207);
+    transition: all .2s ease-in;
+}
+
+.pages-container tbody button:last-child:hover {
+    background-color: rgba(168, 168, 168, 0.705);
+    /* opacity: 85%; */
+}
+
+.pages-container tbody button .tooltip {
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    height: 0;
+    width: 40px;
+    font-size: 10px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fcfcfc;
+    border-radius: 4px;
+    background-color: rgba(92, 92, 92, 0.712);
+    visibility: hidden;
+    transition: all .2s ease-in;
+    pointer-events: none;
+}
+
+.pages-container tbody button:hover .tooltip {
+    height: 20px;
+    visibility: visible;
+}
+
+.edit-icon {
+    color: #fcfcfc;
+}
+
+.delete-icon {
+    color: rgb(109, 109, 109);
+}
+
+.pagination-container {
+    height: 40px;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(235, 230, 230); */
+    /* border: 1px solid grey; */
+    /* border-radius: 8px; */
+    padding: 0px 8px 0px 8px;
+    margin: 10px 20px 0px 0px;
+}
+
+.pagination-container a {
+    height: 28px;
+    width: 28px;
+    font-weight: lighter;
+    margin: 0px 5px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.pagination-container a:hover {
+    background-color: #dddddd67;
+}
+
+.prev-label .prev-icon {
+    font-size: 15px;
+}
+
+.next-label .next-icon {
+    margin-left: 2px;
+    font-size: 15px;
+}
+
+.selected a {
+    color: rgba(0, 0, 255, 0.678);
+    background-color: #dddddd67;
+    border-color: rgba(0, 0, 255, 0.685);
+}
+
+.disabled a {
+    color: rgba(207, 207, 207, 0.658);
+    border-color: rgb(206, 206, 206);
+    cursor: default;
+    background-color: transparent;
+}
+
+.disabled a:hover {
+    background-color: transparent;
+}
+
+.list-top {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0px;
+    /* background-color: aqua; */
+    margin-bottom: 20px;
+}
+
+.list-top .btn-container {
+    height: 100%;
+    width: 120px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+.list-top .btn-container button {
+    height: 45px;
+    width: 100px;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: .7px;
+    transition: all .2s ease-in;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.list-top .btn-container button .tooltip {
+    position: absolute;
+    top: 57px;
+    right: 0px;
+    height: 0px;
+    width: 100px;
+    font-size: 11px; 
+    font-weight: 500;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fcfcfc;
+    border-radius: 5px;
+    background-color: rgba(92, 92, 92, 0.712);
+    visibility: hidden;
+    transition: all .2s ease-in;
+    letter-spacing: .9px;
+    pointer-events: none;
+}
+.list-top .btn-container button:hover .tooltip {
+    height: 25px;
+    visibility: visible;
+}
+
+.list-top .btn-container button .tooltip:before{
+    position: absolute;
+    content: "";
+    display: block;
+    top: -8px;
+    height:0px;
+    width: 0px;
+    border-bottom: 8px solid rgba(92, 92, 92, 0.712);
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    /* border-top: 8px solid transparent; */
+}
+.list-top .btn-container button:hover {
+    opacity: 85%;
+}
+
+.list-top .btn-container button:hover .icon {
+    opacity: 85%;
+}
+
+.list-top .btn-container button:active {
+    opacity: 98%;
+}
+
+.list-top .btn-container button:active .icon {
+    opacity: 98%;
+}
+
+.list-top .btn-container button {
+    background-color: green;
+    color: white;
+}
+
+.list-top .btn-container button:disabled {
+    opacity: 70%;
+    cursor: not-allowed;
+}
+
+.list-top .btn-container button:disabled .icon {
+    opacity: 70%;
+}
+
+.list-top .btn-container button .icon {
+    height: 25px;
+    width: 25px;
+}
+
+.list-top .search {
+    width: 380px;
+    height: 38px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 7px;
+    position: relative;
+}
+
+.list-top .search input {
+    height: 100%;
+    width: 75%;
+    padding: 8px;
+    border-radius: 7px 0px 0px 7px;
+    border: none;
+    outline: none;
+    border-right: 1px solid grey;
+    font-size: 14px;
+    background-color: #fcfcfc;
+    color: black;
+}
+
+.list-top .search select {
+    height: 100%;
+    width: 30%;
+    border-radius: 0px 7px 7px 0px;
+    font-size: 14px;
+    border: none;
+    padding: 3px;
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(228, 228, 228);
+    color: #555;
+}

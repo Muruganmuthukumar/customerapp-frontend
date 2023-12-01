@@ -1,0 +1,357 @@
+.side-panel {
+    height: 100%;
+    width: 6%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: width 0.3s cubic-bezier(0.4, 0, 1, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 1, 1);
+    background-color: rgb(236, 236, 236);
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.collapse {
+    height: 28px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 13em;
+    right: -12px;
+    /* transition: height .3s cubic-bezier(0.4, 0, 1, 1); */
+}
+
+.collapse button::after {
+    position: absolute;
+    content: '';
+    top: 28px;
+    right: 12px;
+    /* height: 46.7vh; */
+    height: 0;
+    width: 1px;
+    transition: all .3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.collapse button::before {
+    position: absolute;
+    content: '';
+    bottom: 28px;
+    right: 12px;
+    /* height: 38.7vh; */
+    height: 0;
+    width: 1px;
+    transition: all .3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.collapse:hover button::after {
+    background-color: rgb(95, 29, 201);
+    height: 49.8vh;
+}
+
+.collapse:hover button::before {
+    background-color: rgb(95, 29, 201);
+    height: 33.7vh;
+}
+
+.collapse button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid grey;
+    background-color: rgba(255, 255, 255, 0.473);
+    transition: all .2s linear;
+    opacity: 80%;
+}
+
+.collapse:hover button {
+    border-color: rgb(95, 29, 201);
+}
+
+.collapse button:active {
+    background-color: rgba(161, 69, 189, 0.651);
+}
+
+.collapse .icon {
+    font-size: 17px;
+    color: grey;
+}
+
+.collapse button:hover .icon {
+    color: rgb(95, 29, 201);
+}
+
+.link-container {
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    position: relative;
+    /* background-color: white; */
+}
+
+.link-content {
+    width: 100%;
+    height: 90%;
+    padding-top: 30px;
+    /* background-color: rgb(236, 236, 236); */
+}
+
+.link-content ul {
+    height: auto;
+}
+
+.link-content ul li {
+    list-style-type: none;
+    margin-left: 30px;
+}
+.link-container ul a:last-child li{
+    margin-left: 23px;
+}
+.link-content ul a {
+    width: 100%;
+    height: 45px;
+    padding-left: 35px;
+    text-decoration: none;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    color: #0f0f0f;
+    /* transition: all .3s ease-in; */
+    margin: 5px 0px;
+    transition: all .3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.link-content ul .open:hover {
+    background-color: rgba(211, 211, 211, 0.541);
+    color: rgb(95, 29, 201);
+}
+
+.link-content ul .open:active {
+    background-color: rgba(161, 161, 161, 0.541);
+    color: rgb(89, 0, 231);
+}
+
+.link-content ul .close {
+    /* transition: background-color .3s ease-in; */
+    transition: color .3ms linear,
+        background-color .2s ease-in-out;
+
+}
+
+.link-content ul .close:active {
+    background-color: rgba(128, 128, 128, 0.541);
+}
+
+.link-container ul .close:hover {
+    background-color: rgba(194, 157, 255, 0.63);
+    /* color: #727272; */
+}
+
+.link-content ul a:hover .icon {
+    color: rgba(95, 29, 201, 0.822);
+}
+
+.link-content .icon {
+    font-size: 20px;
+    color: rgb(58, 58, 58);
+    margin-left: -5px;
+    transition: all .3ms linear;
+}
+
+.link-content div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.user {
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    /* background-color: blueviolet; */
+    color: #464646;
+    border-bottom: 2px solid #ccc;
+}
+
+.user .img {
+    height: 85px;
+    transition: all .5s;
+}
+.user .img1{
+    height: 150px;
+    transition: all .5s;
+}
+
+.user img {
+    height: 100%;
+    border-radius: 50%;
+}
+
+.pages {
+    height: 100vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    background-color: rgb(241, 245, 241);
+    /* z-index: -1; */
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    transition: all .3s cubic-bezier(0.4, 0, 1, 1);
+
+}
+
+.pages::-webkit-scrollbar {
+    width: 0px;
+}
+
+.pages nav h4 {
+    font-size: 14px;
+    color: rgb(95, 29, 201);
+    height: 10vh;
+    font-size: 21px;
+    width: 100%;
+    margin-left: 40px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+
+}
+
+.pages nav {
+    width: 100%;
+    height: 10vh;
+    margin-bottom: 30px;
+    background-color: #ececec;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+}
+.pages nav div{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 40px;
+    align-self: center;
+}
+.pages nav a{
+    color: black;
+    padding:6px 7px 0px 7px;
+    border-radius: 50%;
+    transition: all .3s linear;
+}
+.pages nav a:hover{
+    background-color: #ccc;
+    box-shadow: 0 0 3px 3px #ccc;
+}
+.pages nav .icon{
+    height: 35px;
+    width: 35px;
+}
+
+.close {
+    position: relative;
+}
+
+.close .tooltip {
+    height: 40px;
+    width: 0px;
+    left: 60px;
+    font-size: 14px;
+    position: absolute;
+    background-color: rgb(142, 81, 240);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    border-radius: 8px;
+    z-index: 1;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.322);
+    visibility: hidden;
+    transition: all .2s ease-in;
+}
+
+.close:hover .tooltip {
+    width: 100px;
+    visibility: visible;
+}
+
+@media (max-width: 768px) {
+    .side-panel {
+        width: 100%;
+        transition: width 0.3s cubic-bezier(0.4, 0, 1, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 1, 1);
+    }
+
+    .pages {
+        width: 100%;
+        transition: width 0.3s cubic-bezier(0.4, 0, 1, 1);
+    }
+
+    .collapse {
+        top: 7em;
+        right: 0;
+    }
+
+    .collapse button::after {
+        top: 49.8vh;
+    }
+
+    .collapse button::before {
+        bottom: 33.7vh;
+    }
+
+    .link-container {
+        height: auto;
+    }
+
+    .link-content ul {
+        height: auto;
+    }
+
+    .link-content ul li {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .link-content ul a {
+        height: 40px;
+        padding-left: 20px;
+    }
+
+    .link-content .icon {
+        font-size: 18px;
+    }
+
+    .user span {
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .dash-top-items {
+        height: 50px;
+    }
+
+    .link-content ul li {
+        font-size: 14px;
+    }
+}
